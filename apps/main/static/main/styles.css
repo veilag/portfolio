@@ -1,0 +1,131 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: Inter;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    overflow: clip;
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 5px;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.content > h1 {
+    font-size: 64px;
+    font-weight: 500;
+    opacity: 0;
+    line-height: 1.2;
+}
+
+.content > p {
+    font-size: 28px;
+    opacity: 0;
+}
+
+.content > span {
+    margin-bottom: 50px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.unstyled > span {
+    position: absolute;
+    font-family: serif;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.unstyled > h1 {
+    position: absolute;
+    font-family: serif;
+    font-weight: 500;
+    top: 70px;
+    left: 10px;
+    line-height: 1.2;
+    margin-bottom: 60px;
+}
+
+.unstyled > p {
+    position: absolute;
+    font-family: serif;
+    top: 50px;
+    left: 10px;
+}
+
+.a {
+    font-size: 18px;
+    color: lightgray;
+}
+
+.second {
+    height: 100vh;
+}
+
+.cursor {
+    position: absolute;
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 127, 255, .2);
+    border: 1px #007FFF solid;
+}
+
+.logo {
+    position: absolute;
+    display: flex;
+    top: 40px;
+    left: 40px;
+    align-items: flex-start;
+}
+
+.logo-v {
+    opacity: 0;
+    margin-top: .7px;
+    width: 30px;
+}
+
+.logo-g {
+    opacity: 0;
+    width: 30px;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+    }
+    .hero {
+        background-color: #1a1a1a;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  .content > h1 {
+    font-size: 42px;
+  }
+
+    .content > p {
+        font-size: 20px;
+    }
+}
