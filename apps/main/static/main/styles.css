@@ -4,14 +4,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    --text-color: #272727;
+}
+
 body {
     width: 100%;
-    font-family: Inter;
+    color: var(--text-color);
+    font-family: Inter, sans-serif;
 }
 
 .hero {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     overflow: clip;
     position: relative;
 }
@@ -22,17 +27,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 5px;
+    gap: 20px;
     align-items: flex-start;
     margin: 0 auto;
     padding: 40px;
 }
 
 .content > h1 {
-    font-size: 64px;
+    font-size: 72px;
+    margin-bottom: 20px;
     font-weight: 500;
     opacity: 0;
-    line-height: 1.2;
+    line-height: 1;
 }
 
 .content > p {
@@ -41,7 +47,7 @@ body {
 }
 
 .content > span {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     font-size: 24px;
     display: flex;
     flex-direction: column;
@@ -63,7 +69,7 @@ body {
     font-weight: 500;
     top: 70px;
     left: 10px;
-    line-height: 1.2;
+    line-height: 1;
     margin-bottom: 60px;
 }
 
@@ -74,7 +80,12 @@ body {
     left: 10px;
 }
 
-.a {
+.unstyled .a {
+    font-size: 14px;
+    color: lightgray;
+}
+
+.content .a {
     font-size: 18px;
     color: lightgray;
 }
@@ -112,15 +123,23 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        color: white;
+    :root {
+        --text-color: white;
     }
-    .hero {
+
+    body {
         background-color: #1a1a1a;
     }
 }
 
 @media only screen and (max-width: 600px) {
+    .logo {
+        top: 20px;
+        left: 20px;
+    }
+    .content {
+        padding: 20px;
+    }
   .content > h1 {
     font-size: 42px;
   }
