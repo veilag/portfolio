@@ -6,51 +6,48 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'main/styles.css' %}">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="{% static 'core.js' %}"></script>
   <script src="{% static 'main/script.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+
   <title>Галиев Рамиль - Портфолио</title>
 </head>
 <body>
-  <section class="hero">
-    <div class="unstyled">
-      <span>
-        <span>Full name</span>
-        <span class="a">Description</span>
-      </span>
-      <p>// Suptitle</p>
-      <h1>Long title…</h1>
-    </div>
+  <main class="container">
+    <header>Header</header>
+    <section class="content">
+      <div class="left__content">
+        <div class="top__section">
+          <div class="section__scrollable">
+            <div class="scrollable__title">Инструменты</div>
+            <div class="scrollable__content"></div>
+          </div>
+        </div>
+        <div class="bottom__section">
+          <p class="section__subtitle">// Делайте то, что любите</p>
+          <h1 class="section__title">То, на что хочется смотреть <i>снова и снова</i>...</h1>
+        </div>
+      </div>
+      <div class="right__content">
+        <div class="center__section">
+          <div class="section__scrollable">
+            <div class="scrollable__title">О себе</div>
+            <div class="scrollable__content">
+              Lorem ipsum dolor sit amet consectetur. Eget urna faucibus nibh rutrum eu dictum mauris in. Dui volutpat volutpat condimentum sagittis.<br/><br/>
+              Egestas eu magna suscipit posuere tristique rutrum lectus purus accumsan. Mi et porta mauris quisque suspendisse viverra.<br/><br/>
+              Egestas eu magna suscipit posuere tristique rutrum lectus purus accumsan. Mi et porta mauris quisque suspendisse viverra.<br/><br/>
+              Egestas eu magna suscipit posuere tristique rutrum lectus purus accumsan. Mi et porta mauris quisque suspendisse viverra.<br/><br/>
+              Egestas eu magna suscipit posuere tristique rutrum lectus purus accumsan. Mi et porta mauris quisque suspendisse viverra.<br/><br/>
+              Egestas eu magna suscipit posuere tristique rutrum lectus purus accumsan. Mi et porta mauris quisque suspendisse viverra.<br/><br/>
 
-    <div class="logo">
-      <picture>
-        <source srcset="{% static 'main/logo-v.svg' %}" media="(prefers-color-scheme: light)"/>
-        <source srcset="{% static 'main/logo-v-dark.svg' %}"  media="(prefers-color-scheme: dark)"/>
-        <img class="logo-v" src="{% static 'main/logo-v-dark.svg' %}">
-      </picture>
-      <picture>
-        <source srcset="{% static 'main/logo-g.svg' %}" media="(prefers-color-scheme: light)"/>
-        <source srcset="{% static 'main/logo-g-dark.svg' %}"  media="(prefers-color-scheme: dark)"/>
-        <img class="logo-g" src="{% static 'main/logo-v-dark.svg' %}">
-      </picture>
-    </div>
-
-    <div class="content">
-      <span>
-        <span>Full name</span>
-        <span class="a">Description</span>
-      </span>
-      <p>// Suptitle</p>
-      <h1>Long title…</h1>
-    </div>
-  </section>
-  <section class="second">
-
-  </section>
+              Egestas eu magna suscipit posuere tristique rutrum lectus purus accumsan. Mi et porta mauris quisque suspendisse viverra.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
