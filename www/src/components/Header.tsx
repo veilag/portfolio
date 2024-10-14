@@ -1,0 +1,38 @@
+import Logo from "./Logo.tsx";
+import TelegramIcon from "./icons/TelegramIcon.tsx";
+import GitHubIcon from "./icons/GitHubIcon.tsx";
+
+const Header = () => {
+  return (
+    <header
+      className={`w-full flex p-10 justify-between`}
+    >
+      <div className="flex gap-7">
+        <Logo width={30} />
+        <div className="mt-[-3px]">
+          <h3 className="text-xl leading-5">Галиев Рамиль</h3>
+          <p className="cursor-default">веб-программист • дизайнер</p>
+        </div>
+      </div>
+
+      <div className="flex gap-12">
+        <a href="https://t.me/veilag" className="flex items-center gap-3">
+          <TelegramIcon/>
+          <div className="flex flex-col">
+            <p className="leading-4">Telegram</p>
+            <span className="text-sm">@veilag</span>
+          </div>
+        </a>
+        <a href="https://github.com/veilag" className="flex items-center gap-3">
+          <GitHubIcon/>
+          <div className="flex flex-col">
+            <p className="leading-4">GitHub</p>
+            <span className="text-sm">@veilag</span>
+          </div>
+        </a>
+      </div>
+    </header>
+  )
+}
+
+export default Header
