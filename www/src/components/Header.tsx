@@ -5,7 +5,7 @@ import GitHubIcon from "./icons/GitHubIcon.tsx";
 const Header = () => {
   return (
     <header
-      className={`w-full flex p-10 justify-between`}
+      className="w-full flex px-10 h-32 items-center justify-between"
     >
       <div className="flex gap-7">
         <Logo width={30} />

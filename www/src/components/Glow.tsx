@@ -1,7 +1,9 @@
 import {SparklesCore} from "./ui/sparkles.tsx";
-import {motion} from "framer-motion";
+import {motion, useWillChange} from "framer-motion";
 
 const Glow = () => {
+  const willChange = useWillChange()
+
   return (
     <>
       <motion.div
@@ -20,12 +22,15 @@ const Glow = () => {
       />
       <div className="absolute top-[-100px] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
         <motion.div
-          className="w-[200px] h-[200px] bg-white rounded-full blur-[120px]"
+          className="w-[200px] h-[200px] bg-white rounded-full "
           initial={{
             opacity: 0,
+            filter: "blur(50px)"
           }}
+          style={{willChange}}
           animate={{
             opacity: 1,
+            filter: "blur(100px)"
           }}
           transition={{
             ease: "easeOut",
