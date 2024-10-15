@@ -13,6 +13,8 @@ const ListItem = ({ id, title, subtitle, link }: ListItemProps) => {
     className="block w-full"
       key={id}
       transition={{
+        duration: 0.9,
+        type: "spring",
         delay: id * 0.08
       }}
       initial={{

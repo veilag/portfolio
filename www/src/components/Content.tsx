@@ -1,6 +1,7 @@
 import { toolsAndLibs, works } from "../data"
 import ContentBlock from "./ContentBlock"
 import { useState } from "react"
+import {motion} from "framer-motion"
 
 const Content = () => {
   const [isAboutRevealed, setAboutRevealed] = useState<boolean>(false)
@@ -14,13 +15,45 @@ const Content = () => {
             <ContentBlock title="Последние работы" list={works}/>
           </div>
           
-          <div className="top-2">
+          <motion.div
+            transition={{
+              duration: 1,
+              type: "spring",
+              delay: 0.5,
+            }}
+            initial={{
+              opacity: 0,
+              y: 40,
+              filter: "blur(4px)",
+            }} 
+            animate={{
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+            }}
+          >
             <p className="text-xl ">// Делайте то, что любите</p>
             <h1 className="text-4xl font-medium">То, на что хочется смотреть<br/> <i>снова и снова</i>...</h1>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="flex-1 max-w-[800px]">
+        <motion.div 
+        transition={{
+          duration: 1,
+          type: "spring",
+          delay: 0.8,
+        }}
+        initial={{
+          opacity: 0,
+          y: 40,
+          filter: "blur(4px)",
+        }} 
+        animate={{
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+        }}
+        className="flex-1 max-w-[800px]">
           <p className="text-neutral-400 top-4">О себе</p>
           <div className={`relative mt-2 ${!isAboutRevealed && 'h-96'} overflow-clip pb-10 text-lg no-scrollbar`}>
             {new Array(16).fill("").map(() => (
@@ -34,10 +67,25 @@ const Content = () => {
             
             {!isAboutRevealed  && <div className="text-sm absolute bottom-0 w-full h-20 fade pointer-events-none"></div>}
           </div>
-          <button
+          <motion.button
+            transition={{
+              duration: 1,
+              type: "spring",
+              delay: 1,
+            }}
+            initial={{
+              opacity: 0,
+              y: 60,
+              filter: "blur(4px)",
+            }} 
+            animate={{
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+            }}
             onClick={() => setAboutRevealed(true)} 
-            className={`bg-white ${isAboutRevealed ? 'hidden' : 'block'} font-medium rounded-full px-5 py-1.5 mt-4 text-black`}>Раскрыть</button>
-        </div>
+            className={`bg-white ${isAboutRevealed ? 'hidden' : 'block'} font-medium rounded-full px-5 py-1.5 mt-4 text-black`}>Раскрыть</motion.button>
+        </motion.div>
       </div>
     </div>
   )
