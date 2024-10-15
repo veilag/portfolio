@@ -12,7 +12,7 @@ const Glow = () => {
           width: 0
         }}
         animate={{
-          width: 400
+          width: 400,
         }}
         transition={{
           ease: "easeOut",
@@ -20,17 +20,15 @@ const Glow = () => {
           delay: 2
         }}
       />
-      <div className="absolute top-[-100px] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+      <div className="absolute -z-10 top-[-100px] 2xl:top-[-200px] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
         <motion.div
-          className="w-[200px] h-[200px] bg-white rounded-full "
+          className="w-[200px] blur-[100px] h-[200px] 2xl:w-[250px] 2xl:h-[250px] bg-white rounded-full "
           initial={{
             opacity: 0,
-            filter: "blur(50px)"
           }}
           style={{willChange}}
           animate={{
             opacity: 1,
-            filter: "blur(100px)"
           }}
           transition={{
             ease: "easeOut",

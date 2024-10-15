@@ -2,7 +2,7 @@ const GitHubIcon = () => {
   return (
     <svg width="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
-        className="fill-[#272727] dark:fill-white"
+        className="fill-white"
         fillRule="evenodd"
         clipRule="evenodd"
         fill="white"
