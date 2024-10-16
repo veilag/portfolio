@@ -2,7 +2,6 @@ import { ListItemType } from "../data"
 import ListItem from "./ListItem"
 import {motion} from "framer-motion"
 
-
 interface ContentBlockProps {
   title: string
   list: ListItemType[]
