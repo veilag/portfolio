@@ -4,6 +4,7 @@ import { useState } from "react"
 import {motion} from "framer-motion"
 import ImageView from "./ImageView.tsx";
 
+
 const Content = () => {
   const [isAboutRevealed, setAboutRevealed] = useState<boolean>(false)
 
