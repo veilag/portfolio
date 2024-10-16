@@ -2,6 +2,7 @@ import { toolsAndLibs, works } from "../data"
 import ContentBlock from "./ContentBlock"
 import { useState } from "react"
 import {motion} from "framer-motion"
+import ImageView from "./ImageView.tsx";
 
 const Content = () => {
   const [isAboutRevealed, setAboutRevealed] = useState<boolean>(false)
@@ -9,15 +10,15 @@ const Content = () => {
   return (
     <div className="min-h-[calc(100vh-8rem)] px-10 w-full max-w-[1420px] m-auto">
       {isAboutRevealed && <div className="fixed left-0 z-10 bottom-0 w-full h-28 fade pointer-events-none"></div>}
-      <div className="flex h-full justify-between top-2 gap-32">
-        <div className="flex flex-col gap-5 top-10 justify-start pb-10">
-          <div className="flex gap-20">
+      <div className="flex h-full flex-col xl:gap-32 xl:flex-row justify-between top-2">
+        <div className="flex flex-col-reverse xl:flex-col gap-5 top-10 justify-start pb-10">
+          <div className="flex flex-col sm:flex-row gap-10 xl:gap-20">
             <ContentBlock title="Инструменты / Библиотеки" list={toolsAndLibs}/>
             <ContentBlock title="Последние работы" list={works}/>
           </div>
 
           <motion.div
-            className="sticky top-4 bg-[#1a1a1a] py-4"
+            className="xl:sticky top-4 xl:bg-[#1a1a1a] py-4 z-10"
             transition={{
               duration: 1,
               type: "spring",
@@ -38,18 +39,9 @@ const Content = () => {
             <h1 className="text-4xl font-medium">То, на что хочется смотреть<br/> <i>снова и снова</i>...</h1>
           </motion.div>
           {isAboutRevealed && (
-            <div className="mt-20">
-              <div>
-                <div className="w-full h-96 border-neutral-500 border bg-neutral-700 rounded-md"></div>
-                <p className="text-lg mt-3">Beautiful title to figure</p>
-                <p>Subtitle to figure</p>
-              </div>
-
-              <div className="mt-32">
-                <div className="w-full h-96 border-neutral-500 border bg-neutral-700 rounded-md"></div>
-                <p className="text-lg mt-3">Beautiful title to figure</p>
-                <p>Subtitle to figure</p>
-              </div>
+            <div className="mt-20 flex-col gap-64 hidden xl:flex">
+              <ImageView />
+              <ImageView />
             </div>
           )}
         </div>

@@ -16,13 +16,13 @@ const Header = () => {
         duration: 1,
         ease: "easeInOut"
       }}
-      className="w-full max-w-[1420px] m-auto flex px-10 h-32 items-center justify-between"
+      className="overflow-scroll md:max-w-[1420px] m-auto flex px-10 h-32 items-center justify-start gap-6 md:justify-between"
     >
-      <div className="flex gap-7">
+      <div className="flex gap-7 w-fit">
         <Logo width={30}/>
         <div className="mt-[-3px]">
           <h3 className="text-xl leading-5">Галиев Рамиль</h3>
-          <p className="cursor-default">веб-программист • дизайнер</p>
+          <p className="cursor-default whitespace-nowrap">веб-программист • дизайнер</p>
         </div>
       </div>
 
