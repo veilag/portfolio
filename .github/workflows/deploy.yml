@@ -18,13 +18,6 @@ jobs:
         with:
           node-version: '22.9.0'
 
-      - name: Set up SSH connection
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.VDS_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H 91.210.169.164 >> ~/.ssh/known_hosts
-
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v0.1.1
         with:
