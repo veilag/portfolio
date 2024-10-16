@@ -16,9 +16,9 @@ const Header = () => {
         duration: 1,
         ease: "easeInOut"
       }}
-      className="overflow-scroll md:max-w-[1420px] m-auto flex px-10 h-32 items-center justify-start gap-6 md:justify-between"
+      className="md:max-w-[1420px] sm:mt-0 flex-wrap m-auto flex px-10 py-10 md:h-32 items-center justify-start gap-6 md:justify-between"
     >
-      <div className="flex gap-7 w-fit">
+      <div className="flex gap-7">
         <Logo width={30}/>
         <div className="mt-[-3px]">
           <h3 className="text-xl leading-5">Галиев Рамиль</h3>

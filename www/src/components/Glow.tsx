@@ -7,7 +7,7 @@ const Glow = () => {
   return (
     <>
       <motion.div
-        className="h-[2px] bg-gradient-to-r from-transparent via-white to-transparent absolute top-0 left-1/2 transform -translate-x-1/2"
+        className="h-[2px] fixed md:absolute top-0 bg-gradient-to-r from-transparent via-white to-transparent left-1/2 transform -translate-x-1/2"
         initial={{
           width: 0
         }}
@@ -20,7 +20,7 @@ const Glow = () => {
           delay: 2
         }}
       />
-      <div className="absolute -z-10 top-[-100px] 2xl:top-[-200px] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+      <div className="md:absolute fixed -z-10 top-[-100px] 2xl:top-[-200px] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
         <motion.div
           className="w-[200px] blur-[100px] h-[200px] 2xl:w-[250px] 2xl:h-[250px] bg-white rounded-full "
           initial={{
@@ -42,7 +42,7 @@ const Glow = () => {
           minSize={0.6}
           maxSize={1.4}
           particleDensity={50}
-          className="absolute top-0 w-[300px] h-[300px]"
+          className="md:absolute fixed top-0 w-[300px] h-[300px]"
           particleColor="#FFFFFF"
         />
       </div>

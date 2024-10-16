@@ -1,0 +1,26 @@
+name: Deploy to VDS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code from GitHub
+        uses: actions/checkout@v3
+
+      - name: Set up SSH connection
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VDS_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 91.210.169.164 >> ~/.ssh/known_hosts
+
+      - name: Deploy to VDS
+        run: |
+          ssh user@91.210.169.164 'bash -s' < ./deploy.sh
+
