@@ -3,6 +3,7 @@ import TelegramIcon from "./icons/TelegramIcon.tsx";
 import GitHubIcon from "./icons/GitHubIcon.tsx";
 import {motion} from "framer-motion"
 
+
 const Header = () => {
   return (
     <motion.header
