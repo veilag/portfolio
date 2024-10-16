@@ -9,7 +9,7 @@ const Content = () => {
   const [isAboutRevealed, setAboutRevealed] = useState<boolean>(false)
 
   return (
-    <div className="min-h-[calc(100vh-8rem)] px-10 w-full max-w-[1420px] m-auto">
+    <div className="min-h-[calc(100vh-8rem)] md:px-10 px-5 w-full max-w-[1420px] m-auto">
       {isAboutRevealed && <div className="fixed left-0 z-10 bottom-0 w-full h-28 fade pointer-events-none"></div>}
       <div className="flex h-full flex-col xl:gap-32 xl:flex-row justify-between top-2">
         <div className="flex flex-col-reverse xl:flex-col gap-5 top-10 justify-start pb-10">

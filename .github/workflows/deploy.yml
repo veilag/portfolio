@@ -13,11 +13,6 @@ jobs:
       - name: Checkout code from GitHub
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '22.9.0'
-
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v0.1.1
         with:
