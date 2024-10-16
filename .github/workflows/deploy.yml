@@ -22,5 +22,5 @@ jobs:
 
       - name: Deploy to VDS
         run: |
-          ssh user@91.210.169.164 'bash -s' < ./deploy.sh
+          ssh veilag@91.210.169.164 'bash -s' < ./deploy.sh
 
