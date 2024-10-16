@@ -22,7 +22,7 @@ const Header = () => {
       <div className="flex gap-7">
         <Logo width={30}/>
         <div className="mt-[-3px]">
-          <h3 className="text-xl leading-5">Галиев Рамиль Римович</h3>
+          <h3 className="text-xl leading-5">Галиев Рамиль</h3>
           <p className="cursor-default whitespace-nowrap">веб-программист • дизайнер</p>
         </div>
       </div>
