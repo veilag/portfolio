@@ -25,7 +25,7 @@ const ContentBlock = ({ list, title }: ContentBlockProps) => {
     className="relative">
       <div className="z-10 absolute bottom-0 w-full h-20 fade pointer-events-none"></div>
       <p className="text-neutral-400 text-lg">{title}</p>
-      <ul className="flex flex-col items-center gap-5 mt-2 h-[calc(100vh-8rem-200px)] pb-14 no-scrollbar overflow-scroll">
+      <ul className="flex flex-col items-center gap-5 mt-2 max-h-[calc(100vh-8rem-220px)] pb-14 no-scrollbar overflow-scroll">
         {list.map((item, index) => (
           <ListItem
             id={index}

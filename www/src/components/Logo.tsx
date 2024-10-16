@@ -11,16 +11,16 @@ const Logo = ({ width = 38 }: LogoProps) => {
         transition={{
           type: "spring"
         }}
-        initial={{
-          y: 50,
-          opacity: 0,
-          rotate: 90
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-          rotate: 0
-        }}
+        // initial={{
+        //   y: 50,
+        //   opacity: 0,
+        //   rotate: 90
+        // }}
+        // animate={{
+        //   y: 0,
+        //   opacity: 1,
+        //   rotate: 0
+        // }}
         width={width}
         viewBox="0 0 242 240"
         fill="none"
@@ -37,18 +37,18 @@ const Logo = ({ width = 38 }: LogoProps) => {
           type: "spring",
           delay: .1
         }}
-        initial={{
-          y: 50,
-          opacity: 0,
-          scale: .5,
-          rotate: 90
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          rotate: 0
-        }}
+        // initial={{
+        //   y: 50,
+        //   opacity: 0,
+        //   scale: .5,
+        //   rotate: 90
+        // }}
+        // animate={{
+        //   y: 0,
+        //   opacity: 1,
+        //   scale: 1,
+        //   rotate: 0
+        // }}
         width={width}
         viewBox="0 0 247 362"
         fill="none"

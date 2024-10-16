@@ -15,9 +15,9 @@ const Content = () => {
             <ContentBlock title="Инструменты / Библиотеки" list={toolsAndLibs}/>
             <ContentBlock title="Последние работы" list={works}/>
           </div>
-          
+
           <motion.div
-            className="sticky top-8"
+            className="sticky top-4 bg-[#1a1a1a] py-4"
             transition={{
               duration: 1,
               type: "spring",
@@ -27,7 +27,7 @@ const Content = () => {
               opacity: 0,
               y: 40,
               filter: "blur(4px)",
-            }} 
+            }}
             animate={{
               opacity: 1,
               y: 0,
@@ -37,19 +37,34 @@ const Content = () => {
             <p className="text-xl ">// Делайте то, что любите</p>
             <h1 className="text-4xl font-medium">То, на что хочется смотреть<br/> <i>снова и снова</i>...</h1>
           </motion.div>
+          {isAboutRevealed && (
+            <div className="mt-20">
+              <div>
+                <div className="w-full h-96 border-neutral-500 border bg-neutral-700 rounded-md"></div>
+                <p className="text-lg mt-3">Beautiful title to figure</p>
+                <p>Subtitle to figure</p>
+              </div>
+
+              <div className="mt-32">
+                <div className="w-full h-96 border-neutral-500 border bg-neutral-700 rounded-md"></div>
+                <p className="text-lg mt-3">Beautiful title to figure</p>
+                <p>Subtitle to figure</p>
+              </div>
+            </div>
+          )}
         </div>
 
-        <motion.div 
-        transition={{
-          duration: 1,
-          type: "spring",
-          delay: 0.8,
-        }}
-        initial={{
-          opacity: 0,
-          y: 40,
-          filter: "blur(4px)",
-        }} 
+        <motion.div
+          transition={{
+            duration: 1,
+            type: "spring",
+            delay: 0.8,
+          }}
+          initial={{
+            opacity: 0,
+            y: 40,
+            filter: "blur(4px)",
+          }}
         animate={{
           opacity: 1,
           y: 0,

@@ -4,7 +4,17 @@
 }
 
 .fade {
-  background: linear-gradient(to bottom, transparent, #1a1a1a);
-  mask-image: linear-gradient(to top, #1a1a1a 25%, transparent);
-  backdrop-filter: blur(1px);
+  background: linear-gradient(to bottom, transparent, #1a1a1a 80%);
+  /*mask-image: linear-gradient(to top, #1a1a1a 25%, transparent);*/
+  /*backdrop-filter: blur(1px);*/
+}
+
+.tiles {
+  background-image:
+          linear-gradient(transparent 98%, #232323 98%),
+          linear-gradient(90deg, transparent 98%, #232323 98%);
+  background-size: 40px 40px;
+
+  mask-image: radial-gradient(#1a1a1a, transparent);
+  /*mask-image: linear-gradient(to bottom, #1a1a1a 25%, transparent 50%);*/
 }
