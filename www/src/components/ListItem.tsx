@@ -26,7 +26,7 @@ const ListItem = ({ id, title, subtitle, link }: ListItemProps) => {
         y: 0
       }}
     >
-      <a className="w-full block bg-neutral-700 py-2 px-4 bg-opacity-50 border-opacity-40 rounded-md border border-white" href={link}>
+      <a className="w-full backdrop-blur-sm block bg-neutral-700 py-2 px-4 bg-opacity-50 border-opacity-40 rounded-md border border-white" href={link}>
         <p className="font-medium">{title}</p>
         {subtitle && (
           <p className="text-neutral-300 text-sm">{subtitle}</p>

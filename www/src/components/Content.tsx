@@ -12,8 +12,8 @@ const Content = () => {
     <div className="min-h-[calc(100vh-8rem)] md:px-10 px-5 w-full max-w-[1420px] m-auto">
       {isAboutRevealed && <div className="fixed left-0 z-10 bottom-0 w-full h-28 fade pointer-events-none"></div>}
       <div className="flex h-full flex-col xl:gap-32 xl:flex-row justify-between top-2">
-        <div className="flex flex-col-reverse xl:flex-col gap-5 top-10 justify-start pb-10">
-          <div className="flex flex-col sm:flex-row gap-10 xl:gap-12">
+        <div className="flex flex-col gap-5 top-10 justify-start pb-10">
+          <div className="flex flex-col sm:flex-row gap-1 sm:gap-12">
             <ContentBlock title="С чем я работаю" list={toolsAndLibs}/>
             <ContentBlock title="Последние работы" list={works}/>
           </div>
@@ -37,7 +37,7 @@ const Content = () => {
             }}
           >
             <p className="text-xl ">// Делайте то, что любите</p>
-            <h1 className="text-3xl md:text-4xl font-medium">То, на что хочется смотреть<br/> <i>снова и снова</i>...</h1>
+            <h1 className="text-3xl md:text-4xl font-medium">То, на что хочется смотреть<br className="hidden md:block"/> <i>снова и снова</i>...</h1>
           </motion.div>
           {isAboutRevealed && (
             <div className="mt-20 flex-col gap-64 hidden xl:flex">

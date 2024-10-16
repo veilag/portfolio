@@ -7,7 +7,7 @@ const Glow = () => {
   return (
     <>
       <motion.div
-        className="h-[2px] fixed md:absolute top-0 bg-gradient-to-r from-transparent via-white to-transparent left-1/2 transform -translate-x-1/2"
+        className="h-[2px] absolute top-0 bg-gradient-to-r from-transparent via-white to-transparent left-1/2 transform -translate-x-1/2"
         initial={{
           width: 0
         }}

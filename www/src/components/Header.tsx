@@ -17,9 +17,9 @@ const Header = () => {
         duration: 1,
         ease: "easeInOut"
       }}
-      className="md:max-w-[1420px] sm:mt-0 flex-wrap m-auto flex px-10 py-10 md:h-32 items-center justify-start gap-6 md:justify-between"
+      className="md:max-w-[1420px] sm:mt-0 flex-wrap m-auto flex px-5 py-10 md:px-10 md:h-32 items-center justify-start gap-6 md:justify-between"
     >
-      <div className="flex gap-7">
+      <div className="flex gap-5 md:gap-7">
         <Logo width={30}/>
         <div className="mt-[-3px]">
           <h3 className="text-xl leading-5">Галиев Рамиль</h3>
@@ -27,7 +27,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="flex gap-12">
+      <div className="flex gap-8 md:gap-12">
         <a href="https://t.me/veilag" className="flex items-center duration-500 gap-3 hover:scale-110 transition-transform">
           <TelegramIcon/>
           <div className="flex flex-col">
