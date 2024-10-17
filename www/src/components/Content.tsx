@@ -4,13 +4,19 @@ import { useState } from "react"
 import {motion} from "framer-motion"
 import ImageView from "./ImageView.tsx";
 
+const BottomShadow = ({ isAboutRevealed }: { isAboutRevealed: boolean}) => {
+  return (
+    <div className={`${isAboutRevealed ? 'md:block' : 'md:hidden'} fixed left-0 z-10 bottom-0 w-full h-28 fade pointer-events-none`}></div>
+  )
+}
 
 const Content = () => {
   const [isAboutRevealed, setAboutRevealed] = useState<boolean>(false)
 
   return (
-    <div className="min-h-[calc(100vh-8rem)] md:px-10 px-5 w-full max-w-[1420px] m-auto">
-      {isAboutRevealed && <div className="fixed left-0 z-10 bottom-0 w-full h-28 fade pointer-events-none"></div>}
+    <div className="min-h-[calc(100vh-8rem)] md:px-10 px-7 w-full max-w-[1420px] m-auto">
+      <BottomShadow isAboutRevealed={isAboutRevealed} />
+      
       <div className="flex h-full flex-col xl:gap-32 xl:flex-row justify-between top-2">
         <div className="flex flex-col gap-5 top-10 justify-start pb-10">
           <div className="flex flex-col sm:flex-row gap-1 sm:gap-12">
@@ -19,7 +25,7 @@ const Content = () => {
           </div>
 
           <motion.div
-            className="xl:sticky top-4 xl:bg-[#1a1a1a] md:py-4 z-10"
+            className="xl:sticky relative top-4 xl:bg-[#1a1a1a] md:py-4 z-10"
             transition={{
               duration: 1,
               type: "spring",
@@ -36,8 +42,11 @@ const Content = () => {
               filter: "blur(0px)",
             }}
           >
-            <p className="text-xl ">// Делайте то, что любите</p>
-            <h1 className="text-3xl md:text-4xl font-medium">То, на что хочется смотреть<br className="hidden md:block"/> <i>снова и снова</i>...</h1>
+            <div className="absolute hidden md:block -z-10 -top-4 w-full h-10 bg-[#1b1b1b]"></div>
+            <div className="z-10">
+              <p className="text-xl ">// Делайте то, что любите</p>
+              <h1 className="text-3xl md:text-4xl font-medium">То, на что хочется смотреть<br className="hidden md:block" /> <i>снова и снова</i>...</h1>
+            </div>
           </motion.div>
           {isAboutRevealed && (
             <div className="mt-20 flex-col gap-64 hidden xl:flex">

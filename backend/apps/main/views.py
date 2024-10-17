@@ -1,6 +1,13 @@
-from django.http import HttpRequest, HttpResponse
-from django.shortcuts import render
+from . import models
+from rest_framework import serializers, viewsets
 
 
-def index_page(request: HttpRequest) -> HttpResponse:
-    return render(request, 'main/index.html')
+class ToolSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = models.Tool
+        fields = ['id', 'title', 'description', 'link']
+
+
+class ToolViewSet(viewsets.ModelViewSet):
+    queryset = models.Tool.objects.all()
+    serializer_class = ToolSerializer
