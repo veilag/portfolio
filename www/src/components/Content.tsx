@@ -18,7 +18,7 @@ const Content = () => {
       <BottomShadow isAboutRevealed={isAboutRevealed} />
       
       <div className="flex h-full flex-col xl:gap-32 xl:flex-row justify-between top-2">
-        <div className="flex flex-col gap-5 top-10 justify-start pb-10">
+        <div className="flex flex-col gap-5 top-10 justify-start pb-10 xl:pb-0">
           <div className="flex flex-col sm:flex-row gap-1 sm:gap-12">
             <ContentBlock title="С чем я работаю" list={toolsAndLibs}/>
             <ContentBlock title="Последние работы" list={works}/>
