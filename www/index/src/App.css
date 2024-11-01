@@ -1,0 +1,11 @@
+#root {
+  width: 100%;
+  height: 100dvh;
+  margin: 0 auto;
+
+}
+
+.test {
+  font-family: 'Noto Serif Display', sans-serif;
+  font-weight: 600;
+}
